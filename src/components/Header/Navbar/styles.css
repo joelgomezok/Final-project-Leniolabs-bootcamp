@@ -1,0 +1,11 @@
+.star {
+    font-size: 25px;
+      color:gray;
+      
+  }
+  .star:hover{
+    color:gold;
+  }
+.iconmarvel{
+    padding-left: 3%;
+}
