@@ -20,7 +20,7 @@ const HerosCards = () => {
        {herosList.map(hero =>(
         <div className="col"  key={hero.id}>
             <div className="shadows card" style={{width: '100%', height : '16rem'}}>
-                <a href={hero.urls[0].url} target="_blank" rel="noopener noreferrer" >
+                <a href={hero.urls[0].url} target="_blank" rel="noopener noreferrer">
                 <img src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} alt='' className="card-img-top" style={{width: '100%', height : '100%'}} />
                 </a>
                 <p style={{margin:'0px'}}>{hero.name}
