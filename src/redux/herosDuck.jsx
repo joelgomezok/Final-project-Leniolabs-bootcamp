@@ -29,11 +29,12 @@ export const getHerosAction = (name) => async (dispatch) => {
     const APIKeyPublic = "6658de89c9628f0521d5a33849d853e5"; 
     const Hash = md5("1" + APIKeyPrivate + APIKeyPublic);
     let URL;
+    const randomNumber = Math.round(Math.random() * 1493)
 
     if (name.trim() !== "") {
         URL = `${BaseURL}public/characters?limit=20&offset=0&ts=1&orderBy=name&nameStartsWith=${name}&apikey=6658de89c9628f0521d5a33849d853e5&hash=${Hash}`;
       } else {
-         URL = `${BaseURL}public/characters?limit=20&offset=0&ts=1&orderBy=name&apikey=6658de89c9628f0521d5a33849d853e5&hash=${Hash}`;
+         URL = `${BaseURL}public/characters?limit=20&offset=${randomNumber}&ts=1&orderBy=name&apikey=6658de89c9628f0521d5a33849d853e5&hash=${Hash}`;
       }
       try {
         const res= await axios.get(`${URL}`);

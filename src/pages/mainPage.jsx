@@ -6,7 +6,7 @@ const mainPage = () => {
   return (
     <React.Fragment>
       <NavbarSearch></NavbarSearch>
-      <div className= 'container'>
+      <div className= 'container body'>
         <HerosCards></HerosCards>
       </div>
     </React.Fragment>
