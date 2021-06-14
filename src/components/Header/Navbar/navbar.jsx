@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import './styles.css';
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 const NavbarSearch = () => {
   const [inputValue, setInputValue] = useState('');
@@ -16,10 +15,10 @@ const NavbarSearch = () => {
   return ( 
     
         <nav className="navbar navbar-light">
-           <div className='iconmarvel'>
-              <img src="https://i.ibb.co/w7H3zKQ/marvel-logo-4.png"  alt="logo marvel" style={{width: '100px', height : '38px'}} />
-           </div> 
-          <form style={{width: '70%'}} onSubmit={submitHero}>
+           <Link  to="/" style={{ width: '2%', textDecoration: "none" }}>
+              <img  className='iconmarvel' src="https://i.ibb.co/w7H3zKQ/marvel-logo-4.png"  alt="logo marvel" style={{width: '100px', height : '38px'}} />
+           </Link> 
+          <form style={{width: '60%'}} onSubmit={submitHero}>
            <input className='form-control mr-sm-2' 
               type='text' placeholder='Search hero' 
               value={inputValue} onChange={searchHero} 

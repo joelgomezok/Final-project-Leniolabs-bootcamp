@@ -1,16 +1,14 @@
 import React from "react";
-import HerosCards from "../components/Body/cards/herosCardsList";
 import NavbarSearch from "../components/Header/Navbar/navbar";
-
-const MainPage = () => {
+import Comic from "../components/Body/cards/selectedcomics";
+const ComicsPage = () => {
   return (
     <React.Fragment>
-      <NavbarSearch></NavbarSearch>
+      <NavbarSearch> </NavbarSearch>
       <div className= 'container body'>
-        <HerosCards></HerosCards>
+        <Comic> </Comic>
       </div>
     </React.Fragment>
   );
 };
-
-export default MainPage;
+export default ComicsPage;

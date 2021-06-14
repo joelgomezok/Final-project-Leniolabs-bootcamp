@@ -3,10 +3,12 @@ import thunk from 'redux-thunk'
 
 import herosReducer from './herosDuck';
 import comicsReducer from './comicsDuck';
+import selectedComicsReducer from './selectedComicsDuck';
 
 const rootReducer = combineReducers({
     heros: herosReducer,
     comics: comicsReducer,
+    selectedComics: selectedComicsReducer,
     // futuros reducers para combinar
 })
 
