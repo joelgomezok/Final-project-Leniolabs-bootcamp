@@ -21,7 +21,7 @@ const Footer = () => {
                 </a>
           </nav>
           <nav className="footer" style={{margin:'0%', padding: '0%'}}>
-                <span>© 2021 by JOEL GOMEZ</span>
+                <span>© 2021 Developed by JOEL GÓMEZ</span>
           </nav>
       </div>
     </footer>

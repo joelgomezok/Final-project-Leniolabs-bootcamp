@@ -1,28 +1,32 @@
 import React from 'react';
-import './styles.css';
-import {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux'
-import {getHerosAction} from '/Users/Joel_/Desktop/project-final/src/redux/herosDuck'
+import {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {getHerosAction} from '../../../redux/herosDuck';
+import {Link, useLocation } from "react-router-dom";
+
+
+
 
 
 const HerosCards = () => {
     const dispatch = useDispatch();
     const herosList = useSelector(store => store.heros.array);
-    // console.log(herosList);
-   
+    const location = useLocation();
+    const [name] = useState(location.pathname.substr(1));
+
     useEffect(() => {
-        dispatch(getHerosAction())           
-    }, [dispatch])
+          dispatch(getHerosAction(name));
+    }, [dispatch, name]);
 
     return ( 
-    <div className=" container row row-cols-1 row-cols-md-4 g-4" style={{padding:'0%', margin:'0%'}} > 
-                                                                         {/* //buscar otra forma para centrarlo */}
+    <div className="container row row-cols-1 row-cols-md-4 g-4" style={{padding:'0%', margin:'0%'}}> 
+                                                                        
        {herosList.map(hero =>(
         <div className="col"  key={hero.id}>
-            <div className="shadows card" style={{width: '100%', height : '16rem'}}>
-                <a href={hero.urls[0].url} target="_blank" rel="noopener noreferrer">
+            <div className="shadows card" style={{width: '100%', height : '18rem'}}>
+             <Link to={`/characterDetails/${hero.id}`}>
                 <img src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} alt='' className="card-img-top" style={{width: '100%', height : '100%'}} />
-                </a>
+             </Link>
                 <p style={{margin:'0px'}}>{hero.name}
                 </p>
                 <button type="button" className=" btn btn-transparent "style={{color: "gray"}}>
@@ -34,6 +38,6 @@ const HerosCards = () => {
         </div>
        ))}
     </div>
-
-)};
+    )         
+};
 export default HerosCards;
