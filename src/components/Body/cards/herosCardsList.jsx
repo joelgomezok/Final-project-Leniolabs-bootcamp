@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux'
-import {getHerosAction} from '/Users/Joel_/Desktop/project-final/src/redux/herosDuck'
+import {useDispatch, useSelector} from 'react-redux';
+import {getHerosAction} from '../../../redux/herosDuck';
 import {Link, useLocation } from "react-router-dom";
 
 
