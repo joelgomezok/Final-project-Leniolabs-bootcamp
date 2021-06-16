@@ -10,11 +10,10 @@ export const getSelectedComics = (id) => async (dispatch) => {
 	const APIKeyPublic = "6658de89c9628f0521d5a33849d853e5"; 
 	const Hash = md5("1" + APIKeyPrivate + APIKeyPublic);
 	const comicId = id;
-	const getComics = `http://gateway.marvel.com/v1/public/comics/${comicId}?&orderBy=onsaleDate&limit=96&ts=1&apikey=6658de89c9628f0521d5a33849d853e5&hash=${Hash}`; 
+	const getComics = `https://gateway.marvel.com/v1/public/comics/${comicId}?&orderBy=onsaleDate&limit=96&ts=1&apikey=6658de89c9628f0521d5a33849d853e5&hash=${Hash}`; 
 
 	try {
 		const res = await axios.get(`${getComics}`);
-
 		dispatch({
 			type: GET_SELECTED_COMICS,
 			payload: res.data.data.results
