@@ -6,7 +6,7 @@ const CharacterDetails = () => {
   return (
     <React.Fragment>
       <NavbarSearch></NavbarSearch>
-      <div className= 'container body'>
+      <div className= 'container' style={{padding:'0px 24px'}}>
         <HerosComics></HerosComics>
       </div>
     </React.Fragment>

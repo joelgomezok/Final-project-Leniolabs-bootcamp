@@ -14,7 +14,7 @@
 div{
     background-color: white;
   }
-  p{
+  .cardsName{
     position: absolute;
     bottom: 0px;
     padding: 5px;

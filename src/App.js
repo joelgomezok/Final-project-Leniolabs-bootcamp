@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/:heroName?" component={MainPage} />
           <Route exact path="/characterDetails/:characterId" component={CharacterDetails} />
-          <Route exact path="/comics/:comicId" component={ComicsPage} />
+          <Route exact path="/characterDetails/:characterId/comics/:comicId" component={ComicsPage} />
         </Switch>
          <Footer />
     </Router>
