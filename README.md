@@ -18,10 +18,11 @@ The way searches are displayed is in the form of Cards.
 Clicking on a card displays a list of its comics.
 
 ## Functions to be implemented
-Not implemented due to lack of time / experience in technologies
-Character searches by URL
+Not implemented due to lack of time / experience in technologies.
+Does not show errors or loading.
 The search must have the ability to search by comic directly.
-The search should be able to be saved to a favorites list. The Unit Testing
+The search should be able to be saved to a favorites list. 
+The Unit Testing
 
 ## Demo
 https://marvel-project-leniolabs.vercel.app/
