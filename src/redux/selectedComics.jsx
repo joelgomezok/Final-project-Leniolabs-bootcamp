@@ -14,7 +14,6 @@ export const getSelectedComics = (id) => async (dispatch) => {
 
 	try {
 		const res = await axios.get(`${getComics}`);
-
 		dispatch({
 			type: GET_SELECTED_COMICS,
 			payload: res.data.data.results
