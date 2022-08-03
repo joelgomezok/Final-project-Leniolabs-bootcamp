@@ -1,0 +1,1 @@
+//hacer componente generico para hacer la llamada a la api y agregarlo a redux

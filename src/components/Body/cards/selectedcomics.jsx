@@ -14,7 +14,7 @@ const Comic = () => {
 
     return (
 
-      <div className="container card mb-3" style={{padding:'0%', margin:'0%'}}> 
+      <div className="container card mb-3" style={{padding:'0%',  marginTop:'7%'}}> 
                                                                         
             {comic.map((comics, i) =>(
             <div className="shadows row g-0" style={{padding:'3%', margin:'3%'}}  key={comics.id}>

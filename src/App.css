@@ -1,19 +1,4 @@
-.star {
-  font-size: 25px;
-    color:gray;
-    
-}
-.star:hover{
-  color:gold;
-}
-.iconmarvel{
-  margin-left: 2em;
-}
 
-
-div{
-    background-color: white;
-  }
   .cardsName{
     position: absolute;
     bottom: 0px;
@@ -50,30 +35,3 @@ div{
   .star-card:hover{
     color:gold;
   }
-
-  
-  .footer{
-    display:flex;
-    margin-top: 5%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    border-top: black ;
-    background-color: white;
-    font-size: 15px;
-    
-}
-
-.a-footer{
-    text-decoration: none;
-    justify-content: center;
-    margin: 2rem;
-    color:black;
-    object-fit: cover;
-    width: 3%;
-    height: 100%;
-}
-
-span{
-    color:#53606A;
-}

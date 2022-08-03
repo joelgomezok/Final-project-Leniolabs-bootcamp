@@ -1,15 +1,16 @@
 import React from "react";
 import HerosCards from "../components/Body/cards/herosCardsList";
 import NavbarSearch from "../components/Header/Navbar/navbar";
+import Loading from "../components/Loading";
 
 const MainPage = () => {
   return (
-    <React.Fragment>
-      <NavbarSearch></NavbarSearch>
+    <>
+      <NavbarSearch/>      
       <div className= 'container'>
-        <HerosCards></HerosCards>
+        <HerosCards/> ? <HerosCards/> : <Loading/>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

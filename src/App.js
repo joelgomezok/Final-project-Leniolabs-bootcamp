@@ -9,12 +9,12 @@ import Footer from './components/Footer/footer';
 function App() {
 
   return (
-
+ 
     <Router>
         <Switch>
-          <Route exact path="/:heroName?" component={MainPage} />
-          <Route exact path="/characterDetails/:characterId" component={CharacterDetails} />
-          <Route exact path="/characterDetails/:characterId/comics/:comicId" component={ComicsPage} />
+          <Route exact path="/:name?" component={MainPage} />
+          <Route exact path="/:name/:characterId/comics" component={CharacterDetails} />
+          <Route exact path="/:name/:characterId/comics/:comicId" component={ComicsPage} />
         </Switch>
          <Footer />
     </Router>
